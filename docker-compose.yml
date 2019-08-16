@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    ports:
+      - 7001:5000
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo
+      - FLASK_APP=run.py 
+      - APP_SETTINGS=development 
+      - DATABASE_URL=dbname='medicare' host='10.10.164.28' port='9000' user='postgres' password='root'
+      - DATABASE_TEST_URL=dbname='medicare_tests' host='10.10.164.28' port='9000' user='Mcogol' password='root'
+    depends_on:
+      - db
+  db:
+    image: postgres:alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 9000:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=medicare
+
+volumes:
+  postgres_data:
