@@ -10,7 +10,7 @@ services:
       - SECRET_KEY=foo
       - FLASK_APP=run.py 
       - APP_SETTINGS=development 
-      - DATABASE_URL=dbname='medicare' host='10.10.164.28' port='9000' user='postgres' password='root'
+      - DATABASE_URL=dbname=user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets"
       - DATABASE_TEST_URL=dbname='medicare_tests' host='10.10.164.28' port='9000' user='Mcogol' password='root'
     depends_on:
       - db

@@ -22,7 +22,7 @@ RUN \
 RUN \ 
  export FLASK_APP="run.py" \
  export APP_SETTINGS="development" \
- export DATABASE_URL="dbname='medicare' host='10.10.164.28' port='9000' user='postgres' password='root'" \
+ export DATABASE_URL= user='mcogol@myswl-database', password='Masterabram1!', host='myswl-database.mysql.database.azure.com', port=3306, database='vas_assets' \
  export DATABASE_TEST_URL="dbname='medicare_tests' host='localhost' port='0.0.0.0' user='Mcogol' password='root'" \
  export SECRET_KEY="mcogol" \
  export FLASK_DEBUG=1
