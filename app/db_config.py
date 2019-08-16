@@ -5,11 +5,11 @@ import os
 from werkzeug.exceptions import ServiceUnavailable
 
 
-
+# user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets")
 
 def connection():
     try:
-        conn = mysql.connect(host="localhost", user="root", passwd="", database="vas_assets")
+        conn = mysql.connect(user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets")
         return conn
     except:
         raise ServiceUnavailable("OOPS!! We cannot reach the database server at the moment")
