@@ -4,12 +4,13 @@ import mysql.connector as mysql
 import os
 from werkzeug.exceptions import ServiceUnavailable
 
+# cnx = mysql.connector.connect(user="mcogol@myswl-database", password={your_password}, host="myswl-database.mysql.database.azure.com", port=3306, database={your_database}, ssl_ca={ca-cert filename}, ssl_verify_cert=true)
 
 # user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets")
 
 def connection():
     try:
-        conn = mysql.connect(user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets")
+        conn = mysql.connect(user="mcogol@myswl-database", password="Masterabram1!", host="myswl-database.mysql.database.azure.com", port=3306, database="vas_assets", ssl_ca={ca-cert filename}, ssl_verify_cert=true)
         return conn
     except:
         raise ServiceUnavailable("OOPS!! We cannot reach the database server at the moment")
