@@ -94,4 +94,10 @@ class AssetsDTO(object):
         'message': fields.String(required=True, description="success message")
     })
 
+class StatisticsDTO(object):
+    api = Namespace('assets', description='statistics resources')
+    n_resp = api.model('Response for adding a new asset', {
+        'message': fields.String(required=True, description="success message")
+    })
+
     
