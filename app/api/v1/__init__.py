@@ -14,7 +14,7 @@ from .views.projects import api as j_ns
 from .views.files import api as files
 from .views.projectfiles import api as projectfiles
 from .views.assets import api as assets
-# from .views.incident import api as inci_ns
+from .views.statistics import api as stats
 # from .views.records import api as record_ns
 # from .views.comments import api as cm_ns
 # from .views.facilities import api as f_ns
@@ -34,7 +34,7 @@ api.add_namespace(files, path="/resource")
 api.add_namespace(projectfiles, path="/projects")
 api.add_namespace(assets, path="/projects")
 
-# api.add_namespace(inci_ns, path="/incidents")
+api.add_namespace(stats, path="/stats")
 # api.add_namespace(record_ns, path="/records")
 # api.add_namespace(cm_ns, path="/records/<int:record_id>/comment")
 # api.add_namespace(bio_ns, path="/users/<int:id_number>/bio")
